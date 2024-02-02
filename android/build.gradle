@@ -5,10 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { 
-            url 'http://download.flutter.io'
-            allowInsecureProtocol = true
-        }
+        maven { url 'https://storage.flutter-io.cn/download.flutter.io'}
         maven { url "https://oss.sonatype.org/content/groups/public" }
         maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
