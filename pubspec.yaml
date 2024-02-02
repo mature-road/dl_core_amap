@@ -1,6 +1,6 @@
 name: dl_core_amap
 description: An `Amap` Core Component, A Dart Bindings Generator For Native SDK.
-version: 0.14.0
+version: 0.15.0
 author: gavin <443403828@qq.com>
 homepage: https://github.com/mature-road/dl_core_amap
 
