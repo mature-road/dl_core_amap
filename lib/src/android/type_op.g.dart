@@ -105,7 +105,7 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
 // type cast
 // 给一个可选的泛型, 如果没有指定泛型就返回dynamic
 @optionalTypeArgs
-T AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
+T? AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
   final typeName = T.toString();
 
   if (__this__ == null) {

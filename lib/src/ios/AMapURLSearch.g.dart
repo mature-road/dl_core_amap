@@ -28,7 +28,7 @@ class AMapURLSearch extends NSObject  {
       'ObjectFactory::createAMapURLSearch',
       {'init': init}
     );
-    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__);
+    return AmapCoreFluttifyIOSAs<AMapURLSearch>(__result__)!;
   }
   
   static Future<List<AMapURLSearch>> create_batch__(int length, { bool init = true /* ios only */ }) async {
@@ -37,8 +37,8 @@ class AMapURLSearch extends NSObject  {
       'ObjectFactory::create_batchAMapURLSearch',
       {'length': length, 'init': init}
     );
-    return __result_batch__
-        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it))
+    return __result_batch__!
+        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it)!)
         .toList();
   }
   
