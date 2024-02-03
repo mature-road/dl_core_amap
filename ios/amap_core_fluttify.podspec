@@ -19,7 +19,7 @@ A new flutter plugin project.
   # flutter plugin dependency
   
   # sdk dependency
-  s.dependency 'AMapFoundation', '1.8.2'
+  s.dependency 'AMapFoundation', '1.6.9'
 
   s.static_framework = true
   s.ios.deployment_target = '8.0'
