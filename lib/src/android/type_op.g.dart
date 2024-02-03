@@ -54,6 +54,15 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
   } else if (T == android_view_SurfaceView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceView', {'__this__': __this__});
     return result;
+  } else if (T == android_view_SurfaceHolder) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_SurfaceHolder', {'__this__': __this__});
+    return result;
+  } else if (T == android_opengl_GLSurfaceView) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_opengl_GLSurfaceView', {'__this__': __this__});
+    return result;
+  } else if (T == android_view_View_OnApplyWindowInsetsListener) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_View_OnApplyWindowInsetsListener', {'__this__': __this__});
+    return result;
   } else if (T == android_view_ViewGroup) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_view_ViewGroup', {'__this__': __this__});
     return result;
@@ -68,6 +77,9 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == android_widget_ImageView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_ImageView', {'__this__': __this__});
+    return result;
+  } else if (T == java_io_Serializable) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_Serializable', {'__this__': __this__});
     return result;
   } else if (T == java_io_File) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfjava_io_File', {'__this__': __this__});
@@ -92,6 +104,9 @@ Future<bool> AmapCoreFluttifyAndroidIs<T>(dynamic __this__) async {
     return result;
   } else if (T == android_widget_RelativeLayout) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_widget_RelativeLayout', {'__this__': __this__});
+    return result;
+  } else if (T == android_os_Parcelable) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_os_Parcelable', {'__this__': __this__});
     return result;
   } else if (T == android_util_Pair) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfandroid_util_Pair', {'__this__': __this__});
@@ -135,6 +150,12 @@ T? AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_view_View()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_SurfaceView) {
     return (android_view_SurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_SurfaceHolder) {
+    return (android_view_SurfaceHolder.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_opengl_GLSurfaceView) {
+    return (android_opengl_GLSurfaceView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_view_View_OnApplyWindowInsetsListener) {
+    return (android_view_View_OnApplyWindowInsetsListener.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_view_ViewGroup) {
     return (android_view_ViewGroup()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_graphics_Point) {
@@ -145,6 +166,8 @@ T? AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_graphics_Bitmap()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_widget_ImageView) {
     return (android_widget_ImageView()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == java_io_Serializable) {
+    return (java_io_Serializable.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == java_io_File) {
     return (java_io_File()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_location_Location) {
@@ -161,11 +184,13 @@ T? AmapCoreFluttifyAndroidAs<T>(dynamic __this__) {
     return (android_widget_LinearLayout()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_widget_RelativeLayout) {
     return (android_widget_RelativeLayout()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == android_os_Parcelable) {
+    return (android_os_Parcelable.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == android_util_Pair) {
     return (android_util_Pair()..refId = (__this__ as Ref).refId) as T;
   }
   
   else {
-    return null;
+    return __this__;
   }
 }

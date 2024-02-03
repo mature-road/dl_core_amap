@@ -63,6 +63,15 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == NSError) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSError', {'__this__': __this__});
     return result;
+  } else if (T == NSCoding) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSCoding', {'__this__': __this__});
+    return result;
+  } else if (T == NSCopying) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSCopying', {'__this__': __this__});
+    return result;
+  } else if (T == NSMutableCopying) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSMutableCopying', {'__this__': __this__});
+    return result;
   } else if (T == UIView) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIView', {'__this__': __this__});
     return result;
@@ -75,11 +84,17 @@ Future<bool> AmapCoreFluttifyIOSIs<T>(dynamic __this__) async {
   } else if (T == UIImage) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImage', {'__this__': __this__});
     return result;
+  } else if (T == UIImageView) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIImageView', {'__this__': __this__});
+    return result;
   } else if (T == UIColor) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfUIColor', {'__this__': __this__});
     return result;
   } else if (T == NSData) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSData', {'__this__': __this__});
+    return result;
+  } else if (T == NSDate) {
+    final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSDate', {'__this__': __this__});
     return result;
   } else if (T == NSOperation) {
     final result = await kAmapCoreFluttifyChannel.invokeMethod('RefClass::isKindOfNSOperation', {'__this__': __this__});
@@ -129,6 +144,12 @@ T? AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
     return (CLLocationManager()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSError) {
     return (NSError()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCoding) {
+    return (NSCoding.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSCopying) {
+    return (NSCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSMutableCopying) {
+    return (NSMutableCopying.subInstance()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIView) {
     return (UIView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIViewController) {
@@ -137,15 +158,19 @@ T? AmapCoreFluttifyIOSAs<T>(dynamic __this__) {
     return (UIControl()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIImage) {
     return (UIImage()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == UIImageView) {
+    return (UIImageView()..refId = (__this__ as Ref).refId) as T;
   } else if (T == UIColor) {
     return (UIColor()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSData) {
     return (NSData()..refId = (__this__ as Ref).refId) as T;
+  } else if (T == NSDate) {
+    return (NSDate()..refId = (__this__ as Ref).refId) as T;
   } else if (T == NSOperation) {
     return (NSOperation()..refId = (__this__ as Ref).refId) as T;
   }
   
   else {
-    return null;
+    return __this__;
   }
 }

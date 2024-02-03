@@ -37,9 +37,11 @@ class AMapURLSearch extends NSObject  {
       'ObjectFactory::create_batchAMapURLSearch',
       {'length': length, 'init': init}
     );
-    return __result_batch__!
-        .map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it)!)
-        .toList();
+    return __result_batch__
+        ?.map((it) => AmapCoreFluttifyIOSAs<AMapURLSearch>(it))
+        .where((element) => element !=null)
+        .cast<AMapURLSearch>()
+        .toList() ?? <AMapURLSearch>[];
   }
   
   //endregion
@@ -71,7 +73,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapNavigation(AMapNaviConfig config) async {
+  static Future<bool?> openAMapNavigation(AMapNaviConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapNavigation([])');
@@ -88,7 +90,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapRouteSearch(AMapRouteConfig config) async {
+  static Future<bool?> openAMapRouteSearch(AMapRouteConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapRouteSearch([])');
@@ -105,7 +107,7 @@ class AMapURLSearch extends NSObject  {
   }
   
   
-  static Future<bool> openAMapPOISearch(AMapPOIConfig config) async {
+  static Future<bool?> openAMapPOISearch(AMapPOIConfig config) async {
     // print log
     if (fluttifyLogEnabled) {
       debugPrint('fluttify-dart: AMapURLSearch::openAMapPOISearch([])');
@@ -129,7 +131,12 @@ class AMapURLSearch extends NSObject  {
   }
 }
 
-extension AMapURLSearch_Batch on List<AMapURLSearch> {
+extension AMapURLSearch_Batch on List<AMapURLSearch?> {
+  String? get refId {
+    if (isEmpty) return null;
+    return first?.refId;
+  }
+
   //region getters
   
   //endregion
@@ -151,36 +158,36 @@ extension AMapURLSearch_Batch on List<AMapURLSearch> {
   }
   
   
-  static Future<List<bool>> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
+  static Future<List<bool?>> openAMapNavigation_batch(List<AMapNaviConfig> config) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapNavigation_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
-  static Future<List<bool>> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
+  static Future<List<bool?>> openAMapRouteSearch_batch(List<AMapRouteConfig> config) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapRouteSearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   
-  static Future<List<bool>> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
+  static Future<List<bool?>> openAMapPOISearch_batch(List<AMapPOIConfig> config) async {
     assert(true);
   
     // invoke native method
     final resultBatch = await kAmapCoreFluttifyChannel.invokeMethod('AMapURLSearch::openAMapPOISearch_batch', [for (int __i__ = 0; __i__ < config.length; __i__++) {"config": config[__i__]}]);
   
   
-    return (resultBatch as List).map((__result__) => __result__).cast<bool>().toList();
+    return (resultBatch as List).map((__result__) => __result__).cast<bool?>().toList();
   }
   
   //endregion
