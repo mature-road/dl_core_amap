@@ -1,6 +1,6 @@
 name: amap_core_fluttify
 description: An `Amap` Core Component, A Dart Bindings Generator For Native SDK.
-version: 0.15.0
+version: 0.15.1
 author: gavin <443403828@qq.com>
 homepage: https://github.com/mature-road/dl_core_amap
 
@@ -11,14 +11,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+
   foundation_fluttify: ^0.13.0+1
   core_location_fluttify: ^0.7.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  pedantic: ^1.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   plugin:

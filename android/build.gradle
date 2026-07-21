@@ -4,27 +4,25 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://storage.flutter-io.cn/download.flutter.io'}
         maven { url "https://oss.sonatype.org/content/groups/public" }
         maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-        maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
         maven { url 'https://developer.huawei.com/repo/' }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:8.11.1'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://storage.flutter-io.cn/download.flutter.io'}
         maven { url "https://oss.sonatype.org/content/groups/public" }
         maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
-        maven { url "https://dl.bintray.com/aweme-open-sdk-team/public" }
         maven { url 'https://developer.huawei.com/repo/' }
     }
 }
@@ -32,7 +30,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    namespace 'me.yohom.amap_core_fluttify'
+    compileSdk 36
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -46,8 +45,8 @@ android {
         disable 'InvalidPackage'
     }
     compileOptions {
-        targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
     }
     packagingOptions {
         merge 'res/values/values.xml'
@@ -69,7 +68,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     compileOnly rootProject.findProject(":foundation_fluttify")
     // flutter plugin dependency
-    
+
     // sdk dependency
-    
+
 }
