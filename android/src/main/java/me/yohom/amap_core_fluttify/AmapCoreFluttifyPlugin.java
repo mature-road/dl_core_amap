@@ -24,7 +24,6 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.StandardMethodCodec;
 import io.flutter.plugin.platform.PlatformViewRegistry;
 
-import me.yohom.amap_core_fluttify.sub_handler.*;
 import me.yohom.amap_core_fluttify.sub_handler.custom.SubHandlerCustom;
 import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
 
